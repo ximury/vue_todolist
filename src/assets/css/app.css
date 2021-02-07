@@ -1,0 +1,31 @@
+body{
+    background-image:url(../background.jpg);
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #4f4f4f;
+    margin-top: 20px;
+}
+input{
+    width:230px;
+    height:40px;
+    border-radius:20px;
+    padding: 0.4em 0.35em;
+    border:3px solid #CFCFCF;
+    font-size: 1.55em;
+    color:rgb(184, 137, 137)
+}
+input:focus {
+    /* 边框不用border进行设置，用outline */
+    outline: 1px solid rgb(223, 255, 82);
+    /* 聚焦时跟随背景颜色 */
+    /* background: rgba(3, 16, 28, 0); */  
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: rgb(181, 177, 187);
+    font-size: 16px;
+    text-align: center;
+    transform: translate(0, -3px);
+}

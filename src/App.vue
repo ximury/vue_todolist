@@ -1,12 +1,14 @@
 <template>
   <div id="app">
     <h1 v-html = "title"></h1>
-    <input v-model="newItem" v-on:keyup.enter="addNew" ></input>
+    <input v-model="newItem" v-on:keyup.enter="addNew" placeholder="回车添加一项"></input>
     <ul>
-      <li v-for="item in items" v-bind:class="{finished:item.isFinished}" v-on:click="toggleFinish(item)">{{item.label}}</li>
+      <li v-for="item in items" v-bind:class="{finished:item.isFinished}" v-on:click="toggleFinish(item)">
+        {{item.label}}
+      </li>
     </ul>
+    <button class="btn btn-danger" @click="clearall">清除所有</button>
   </div>
- 
 </template>
 
 
@@ -38,6 +40,16 @@ export default {
         "isFinished":false 
       })
       this.newItem=""
+    },
+    clearall:function(){
+      Store.clearall()
+      window.location.href="/"
+      window.location.reload
+    },
+    clear:function(key){
+      Store.clear(key)
+      window.location.href="/"
+      window.location.reload
     }
   }
 }
@@ -51,23 +63,5 @@ li{
   list-style:none;
   font-size:1.6em;
   margin-top:10px;
-}
-
-#app {
-  background-image:url(./576df1167c887_1024.jpg);
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-input{
-  width:230px;
-  height:40px;
-  border-radius:20px;
-  padding: 0.4em 0.35em;
-  border:3px solid #CFCFCF;
-  font-size: 1.55em;
 }
 </style>

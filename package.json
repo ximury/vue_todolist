@@ -2,7 +2,7 @@
   "name": "vuepro",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "BM0500 <BM0500@126.com>",
+  "author": "ximu <github.com/ximury>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -10,6 +10,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
     "vue": "^2.5.2"
   },
   "devDependencies": {

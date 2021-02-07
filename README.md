@@ -20,4 +20,14 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![img](./docs/images/index.png)
+
+![](./docs/images/add.png)
+
+![](./docs/images/show.png)
+
+![](./docs/images/localStorage.png)
+
+
+
+For a detailed explanation on how things work, check out the [webpack guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
